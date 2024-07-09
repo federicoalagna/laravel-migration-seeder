@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\PageController;
+use App\Http\Controllers\TrainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,5 @@ use App\Http\Controllers\Guest\PageController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', [TrainController::class, 'index']);
